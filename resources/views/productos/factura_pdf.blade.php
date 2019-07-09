@@ -8,7 +8,7 @@
 		<thead>
 			<tr>
 				<th>Nombre Producto</th>
-				<th>Precio U/D</th>
+				<th>Precio U/N</th>
 				<th>Cantidad</th>
 				<th>Total</th>
 			</tr>

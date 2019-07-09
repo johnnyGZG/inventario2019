@@ -19,7 +19,7 @@ class CrearTablaInventario extends Migration
             $table->unsignedInteger('producto_id');
             $table->unsignedInteger('cliente_id')->nullable();
             $table->integer('cantidad');
-            $table->float('total');
+            $table->float('total',12,3);
             $table->unsignedInteger('estado_inventario_id');
 
             $table->timestamps();

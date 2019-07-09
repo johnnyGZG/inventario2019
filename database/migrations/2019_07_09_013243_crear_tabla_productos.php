@@ -20,7 +20,7 @@ class CrearTablaProductos extends Migration
             $table->integer('cantidad');
             $table->string('num_lote')->nullable();
             $table->timestamp('vencimiento')->nullable();
-            $table->float('precio');
+            $table->float('precio',12,3);
             $table->unsignedInteger('estado_producto_id');
 
             $table->timestamps();
