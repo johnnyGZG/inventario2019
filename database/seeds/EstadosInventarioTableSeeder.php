@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\estado_inventario;
+use App\EstadoInventario;
 
 class EstadosInventarioTableSeeder extends Seeder
 {
@@ -13,17 +13,17 @@ class EstadosInventarioTableSeeder extends Seeder
      */
     public function run()
     {
-        estado_inventario::truncate();
+        EstadoInventario::truncate();
 
-        $estadoInventario = new estado_inventario;
+        $estadoInventario = new EstadoInventario;
     	$estadoInventario->estado = "Transacción Completa";
         $estadoInventario->save();
 
-        $estadoInventario = new estado_inventario;
+        $estadoInventario = new EstadoInventario;
     	$estadoInventario->estado = "Cancelado";
         $estadoInventario->save();
 
-        $estadoInventario = new estado_inventario;
+        $estadoInventario = new EstadoInventario;
     	$estadoInventario->estado = "Pendiente";
         $estadoInventario->save();
     }

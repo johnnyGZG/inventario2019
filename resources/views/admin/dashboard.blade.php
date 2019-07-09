@@ -33,15 +33,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>
+                            @foreach($productos as $producto)
+                                <tr>
+                                    <th scope="row">{{ $producto->id }}</th>
+                                    <td>{{ $producto->nom_producto }}</td>
+                                    <td>{{ $producto->cantidad }}</td>
+                                    <td>{{ $producto->vencimiento->format('Y-m-d') }}</td>
+                                    <td>{{ $producto->precio }}</td>
+                                    <td>
 
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
 

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\estado_producto;
+use App\EstadoProducto;
 
 class EstadosProductoTableSeeder extends Seeder
 {
@@ -13,21 +13,21 @@ class EstadosProductoTableSeeder extends Seeder
      */
     public function run()
     {
-        estado_producto::truncate();
+        EstadoProducto::truncate();
 
-        $estadoProducto = new estado_producto;
+        $estadoProducto = new EstadoProducto;
     	$estadoProducto->estado = "Disponible";
         $estadoProducto->save();
         
-        $estadoProducto = new estado_producto;
+        $estadoProducto = new EstadoProducto;
     	$estadoProducto->estado = "Agotado";
         $estadoProducto->save();
         
-        $estadoProducto = new estado_producto;
+        $estadoProducto = new EstadoProducto;
     	$estadoProducto->estado = "Vencido";
         $estadoProducto->save();
         
-        $estadoProducto = new estado_producto;
+        $estadoProducto = new EstadoProducto;
     	$estadoProducto->estado = "Pocos Disponibles";
     	$estadoProducto->save();
     }

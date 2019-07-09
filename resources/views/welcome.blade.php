@@ -81,10 +81,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Ver Productos
+                    <a href="{{ route('producto.show') }}">
+                        Ver Productos
+                    </a>
                 </div>
-
-                
             </div>
         </div>
     </body>

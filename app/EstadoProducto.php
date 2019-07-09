@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class estado_producto extends Model
+class EstadoProducto extends Model
 {
     /**
      * The database table used by the model.

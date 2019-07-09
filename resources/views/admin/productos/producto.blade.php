@@ -11,6 +11,9 @@
                 <div class="card-body">
                     
                     <form method="POST" action="{{ route('admin.productos.store') }}">
+
+                        @csrf
+                        
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="nom_producto">Nombre:</label>
@@ -39,6 +42,17 @@
                             <div class="form-group col-md-6">
                                 <label for="cantidad">Cantidad:</label>
                                 <input name="cantidad" type="number" class="form-control" id="cantidad" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="estado_producto_id">Estado:</label>
+                                <select name="estado_producto_id" class="form-control" id="estado_producto_id" required>
+                                    @foreach( $opc_estado as $estadoKey => $estadoValue )
+                                        <option value="{{ $estadoKey }}">{{ $estadoValue }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 

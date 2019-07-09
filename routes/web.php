@@ -24,15 +24,24 @@ Auth::routes();
 	Route::delete('posts/{photo}','PhotosController@destroy')->name('admin.photos.destroy');
 });*/
 
+Route::get('productos', 'ProductoController@show')->name('producto.show');
+Route::post('productos/factura', 'ProductoController@store')->name('producto.store');
+
 Route::group([
 	'prefix' => 'admin',
 	'namespace' => 'Admin',
 	'middleware' => 'auth'
 ], function(){
+
 	Route::get('/', 'AdminController@index')->name('dashboard');
+
 	Route::get('producto/create', 'ProductoController@create')->name('admin.productos.create');
+
 	Route::post('producto', 'ProductoController@store')->name('admin.productos.store');
 });
+
+
+
 
 
 // Authentication Routes...

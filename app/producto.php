@@ -2,10 +2,10 @@
 
 namespace App;
 
-use App\estado_producto;
+use App\EstadoProducto;
 use Illuminate\Database\Eloquent\Model;
 
-class producto extends Model
+class Producto extends Model
 {
     /**
      * The database table used by the model.
@@ -13,6 +13,8 @@ class producto extends Model
      * @var string
      */
     protected $table = 'productos';
+
+    protected $dates = ['vencimiento'];
 
     /**
      * The attributes that are mass assignable.
@@ -30,6 +32,6 @@ class producto extends Model
 
     public function estadoProductio()
     {
-        return $this->hasOne(estado_producto::class,'estado_producto_id','id');
+        return $this->hasOne(EstadoProducto::class,'id','estado_producto_id');
     }
 }

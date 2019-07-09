@@ -2,11 +2,11 @@
 
 namespace App;
 
-use App\producto;
-use App\estado_inventario;
+use App\Producto;
+use App\EstadoInventario;
 use Illuminate\Database\Eloquent\Model;
 
-class inventario extends Model
+class Inventario extends Model
 {
     /**
      * The database table used by the model.
@@ -30,11 +30,11 @@ class inventario extends Model
 
     public function producto()
     {
-        return $this->belongsTo(producto::class,'producto_id','id');
+        return $this->belongsTo(Producto::class,'producto_id','id');
     }
 
     public function estadoInventario()
     {
-        return $this->hasOne(estado_inventario::class,'estado_inventario_id','id');
+        return $this->hasOne(EstadoInventario::class,'estado_inventario_id','id');
     }
 }
